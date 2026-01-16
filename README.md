@@ -17,3 +17,5 @@ Activate the plugin by opening blender and navigating to `Edit > settings > addo
 ## Development
 ### Testing
 - `python3 -m unittest discover tests`
+![ZMS](https://github.com/user-attachments/assets/9d2346d1-68bd-40a1-b12e-e5fae753b1e7)
+![ZON](https://github.com/user-attachments/assets/10689669-ad20-490c-97fc-8d995894ffd0)
