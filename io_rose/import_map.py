@@ -2,9 +2,10 @@ if "bpy" in locals():
     import importlib
     # importlib.reload(rose)
 else:
-    from .rose.him import *
-    from .rose.til import *
-    from .rose.zon import *
+    from .rose.him import Him
+    from .rose.til import Til
+    from .rose.zon import Zon
+    from .rose.utils import Vector2, list_2d
 
 import glob
 import os
@@ -18,10 +19,10 @@ from bpy_extras.io_utils import ImportHelper
 class ImportMap(bpy.types.Operator, ImportHelper):
     bl_idname = "import_map.zon"
     bl_label = "Import ROSE map (.zon)"
-    bl_options = {"PRESET"}
+    bl_options = {"PRESET", "UNDO"}
     
     filename_ext = ".zon"
-    filter_glob = StringProperty(default="*.zon", options={"HIDDEN"})
+    filter_glob: StringProperty(default="*.zon;*.ZON", options={"HIDDEN"})
 
     def execute(self, context):
         him_ext = ".HIM"
